@@ -362,7 +362,6 @@ img{display: block;}
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: background-color;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .command-soc-link:hover,
@@ -377,7 +376,6 @@ img{display: block;}
 .command-soc-icon{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: #AFB1B8;
-    transition-property: fill;
 }
 
 
@@ -432,7 +430,6 @@ padding: 30px 10px;
     /* cursor: pointer; */
 }
 .client-icon{
-    transition-property: fill;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 .client-link:hover,
 .client-link:focus{border: 1px solid #2196F3;}
@@ -477,7 +474,6 @@ padding: 30px 10px;
 .portfolio-cards-list {
     display: block;
     position: relative;
-    transition-property: box-shadow;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -535,7 +531,6 @@ padding-bottom: 60px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
-    transition-property: color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-footer .link:hover,
@@ -574,7 +569,6 @@ padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: background-color;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 .footer-soc-icon{
     fill: var(--primary-white-color);
@@ -634,7 +628,6 @@ padding-bottom: 60px;
     line-height: 1.87;
     letter-spacing: 0.06em;
     text-align: center;
-    transition-property: background-color;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover{
@@ -659,8 +652,7 @@ padding-bottom: 60px;
     padding: 6px 22px;
     display: inline-block;
     border: transparent;
-    transition-property: background-color;
-    transition: background-color box-shadow color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .button-nav-portfolio:hover,
@@ -733,7 +725,7 @@ padding-bottom: 60px;
     align-items: center;
     letter-spacing: 0.06em;
     color: var(--primary-white-color);
-    border: transparent;  
+    border: transparent; 
 }
 .modal-button:hover,
 .modal-button:focus {
@@ -751,7 +743,7 @@ padding-bottom: 60px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     width: 528px;
-    min-height: 581px;
+    max-height: 581px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -770,11 +762,12 @@ padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     }
-.modal-close-icon:hover,
-.modal-close-icon:focus{
-    fill: var(--accent-color);
-}
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon{
+    fill: var(--accent-color)}
+
 .is-hidden{
     opacity: 0;
     visibility: hidden;
@@ -883,6 +876,11 @@ padding-bottom: 60px;
 .modal-check:checked + .check-text .modal-icon-check{
     fill: var(--primary-white-color);
 }
+.modal-check:hover + .check-text span{
+    background-color: var(--accent-color); 
+    border: 0;}
+.modal-check:hover + .check-text .modal-icon-check {fill: var(--primary-white-color);}
+
 .modal-policy-link{
     font-size: 14px;
     line-height: 1.7;

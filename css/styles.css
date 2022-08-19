@@ -676,7 +676,7 @@ padding-bottom: 60px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: background-color opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -713,6 +713,7 @@ padding-bottom: 60px;
 .modal-button{
     width: 200px;
     height: 50px;
+    margin-bottom: 40px;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -764,6 +765,10 @@ padding-bottom: 60px;
     justify-content: center;
     background-color: transparent;
     }
+
+.modal-close-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon{
     fill: var(--accent-color)}
@@ -774,14 +779,16 @@ padding-bottom: 60px;
     pointer-events: none;
 }
 .modal-title{
+    display: block;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .modal-input{
+    /* display: block; */
     width: 448px;
     height: 40px;
     left: 576px;
@@ -865,6 +872,7 @@ padding-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .modal-icon-check{
     fill: transparent;
@@ -877,8 +885,8 @@ padding-bottom: 60px;
     fill: var(--primary-white-color);
 }
 .modal-check:hover + .check-text span{
-    background-color: var(--accent-color); 
-    border: 0;}
+    border: 2px solid var(--accent-color);}
+
 .modal-check:hover + .check-text .modal-icon-check {fill: var(--primary-white-color);}
 
 .modal-policy-link{

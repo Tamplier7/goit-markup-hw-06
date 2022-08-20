@@ -874,6 +874,11 @@ padding-bottom: 60px;
     justify-content: center;
     
 }
+.check-text span:hover, .checkbox:focus+.check-text span{
+    border: 2px solid var(--accent-color);
+}
+
+
 .modal-icon-check{
     fill: transparent;
 }
@@ -884,8 +889,8 @@ padding-bottom: 60px;
 .modal-check:checked + .check-text .modal-icon-check{
     fill: var(--primary-white-color);
 }
-.modal-check:hover + .check-text span{
-    border: 2px solid var(--accent-color);}
+/* .modal-check:hover + .check-text span{
+    border: 2px solid var(--accent-color);} */
 
 .modal-check:hover + .check-text .modal-icon-check {fill: var(--primary-white-color);}
 
